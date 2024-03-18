@@ -48,3 +48,8 @@ back-office (si possible)
 - 3) Boucler sur le résultat pour afficher chaque information.
  
 ## Script PHP - Page détails# projet_base_de_donnees_musique
+
+
+
+## Suivi du projet
+- 
