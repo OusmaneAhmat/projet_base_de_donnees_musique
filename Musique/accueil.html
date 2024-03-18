@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de données de musique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Base de données de musique</h1>
+    </header>
+    <div class="container">
+        <form action="rechercher.php" method="GET">
+            <input type="text" name="search" placeholder="Rechercher...">
+            <button type="submit">Rechercher</button>
+        </form>
+        <table>
+            <tr>
+                <th>Titre</th>
+                <th>Artiste</th>
+                <th>Album</th>
+                <th>Genre</th>
+                <th>Année</th>
+                <th>Durée</th>
+            </tr>
+            <!-- Les données de la base de données seront chargées ici -->
+        </table>
+    </div>
+    <footer>
+        <p>&copy; 2024 Base de données de musique</p>
+    </footer>
+</body>
+</html>
