@@ -6,9 +6,9 @@ Site internet de présentation de mes musiques preferées.
  
 ### Front-office
 - Accueil : Liste de mes musiques
--recherche par mot-clé: en option
--lecture des musiques: en option
--ajout de images des artistes et description de la musique: si possible
+- recherche par mot-clé: en option
+- lecture des musiques: en option
+- ajout de images des artistes et description de la musique: si possible
  
 ### Back-office
 - créer un formulaire pour ajouter des musiques: en option
