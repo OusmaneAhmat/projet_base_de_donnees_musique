@@ -1,4 +1,4 @@
-# Mini-projet: Création d'une base   de données de musique
+# Mini-projet: Création d'une base de données de musique
  
 Site internet de présentation de mes musiques preferées.
  
@@ -8,30 +8,31 @@ Site internet de présentation de mes musiques preferées.
 - Accueil : Liste de mes musiques
 -recherche par mot-clé: en option
 -lecture des musiques: en option
+-ajout de images des artistes et description de la musique: si possible
  
 ### Back-office
-- ajouter un formulaire pour ajouter des musiques: en option
+- créer un formulaire pour ajouter des musiques: en option
 
 ## Structure des données
  
 Une réalisation sera composée de :
 
--titre: text 80 caractere
--date_ajout : INT
--année: INT
--album: text
--chanteur: text
--url de la musique: varchar
--durée: INT
+-titre*: text 80 caractere
+-date* : INT
+-année*: INT
+-album*: text
+-chanteur*: text
+-url*: varchar
+-duree: INT
 
  
 ## Etapes du projet
  
-- Configuration de l'environnement de développement :
+- Configuration de l'environnement de développement : ok
 
 -xamp et visual studio, mise en place de l'arborescence, du fichier readme.md et du dépôt Git. ok
 
-- Création de la BDD MySQL ainsi que les tables et les champs
+- Création de la BDD MySQL ainsi que les tables et les champs:  ok
 
 - Création des pages PHP front-office : 
 
