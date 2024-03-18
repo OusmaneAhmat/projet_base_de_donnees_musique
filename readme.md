@@ -46,10 +46,10 @@ back-office (si possible)
 - 1) Connexion à la base de données
 - 2) Requête SELECT de récupération les informations (musiques, articles, voitures, ...)
 - 3) Boucler sur le résultat pour afficher chaque information.
- 4/ Mettre en forme les écritures
-5/ ajouter à la page de balise html standard
-6/ ajouter un formulaire html en haut de page pour rechercher par mot-titre
-7/ ajouter le clib a chaque chanson
+- 4 Mettre en forme les écritures
+- 5 ajouter à la page de balise html standard
+- 6 ajouter un formulaire html en haut de page pour rechercher par mot-titre
+- 7 ajouter le clib a chaque chanson
 
 ## Script PHP - Page détails# projet_base_de_donnees_musique
 
