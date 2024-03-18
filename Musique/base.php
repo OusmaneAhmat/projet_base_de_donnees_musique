@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -41,8 +41,8 @@
         </tbody>
     </table>
 
-=======
->>>>>>> ba012bbc86829c58381a783ada5bc7292d137a05
+
+
 <?php
     $serveur = "localhost";
     $utilisateur = "root"; 
@@ -60,7 +60,7 @@
 
     $sql = "SELECT * FROM musique" ;
     $resultat = mysqli_query($connexion, $sql) ;
-<<<<<<< HEAD
+
   if ($resultat) { 
     foreach ($resultat as $musique) {
 
@@ -88,19 +88,9 @@
 
 </body>
 </html>
-=======
 
  
-  if ($resultat) { 
-    foreach ($resultat as $musique) {
-        print_r($musique);
-    }
-} else{
-    echo "Erreur : " . mysqli_error($musique); 
+ 
 
-    mysqli_close($connexion);
 
-}
 
-?>
->>>>>>> ba012bbc86829c58381a783ada5bc7292d137a05
