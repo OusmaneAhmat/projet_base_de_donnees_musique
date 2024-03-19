@@ -7,10 +7,10 @@
     <title>musique</title>
     <style>
         body{
-            background-color: olivedrab;
+            background-color: #3498db;
         }
         .navigation{
-            background-color: #8ed1fc;
+            background-color:orange;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -20,6 +20,9 @@
         }
         .navigation :hover {
             color: white;
+     }
+     li:hover{
+        color: white;
      }
     </style>
 </head>
@@ -73,7 +76,7 @@
 
 
        
-    <ul>
+    <ul class "lien">
         <li><a href="contact.html">Contact</a></li>
         <li><a href="Rechercher.html">Rechercher</a></li>
         <li><a href="accueil.html">Accueil</a></li>
