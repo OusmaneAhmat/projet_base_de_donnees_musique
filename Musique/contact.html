@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wvalueth=device-wvalueth, initial-scale=1.0">
+    <title>Formulaire de contact</title>
+</head>
+<body>
+    <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Musique.html">Produits</a></li>
+        <li><a href="Rechercher.html">À Propos</a></li>
+      </ul>
+    <h1>Formulaire de contact</h1>
+    <form action="formulaire.php" method="POST">
+        <div>
+            <label for="nom">Nom*:</label>
+            <input type="text" name="nom" value="nom" required>
+        </div>
+        <br>
+        <div>
+            <label for="prenom">prénom*:</label>
+            <input type="text" name="prenom" value="prenom" required>
+        </div>
+        <br>
+        <div>
+            <label for="telephone">Téléphone</label>
+            <input type="tel" name="telephone" value="telephone" 
+        </div>
+        <br>
+        <div>
+            <label for="email"><strong>E-mail* :</strong></label>
+            <input type="email" name="email" value="email" required>
+        </div>
+        <br>
+        <div>
+            <label for="objet">Objet</label>
+            <select name="objet" value="objet">
+                <option value="plus de musique">Appréciation</option>
+                <option value="question">Question</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="message">Message</label>
+            <textarea name="message" value="message"></textarea>
+        </div>
+        <br>
+        </div>
+        <br>
+        <div>
+            <input type="hidden" name="secret" value="secret" >
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Envoyer le message"> 
+        </div>
+        <br>
+    </form>
+ 
+</body>
+ 
+</html>
