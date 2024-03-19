@@ -27,11 +27,11 @@
     <header>
         <div class="navigation">
             <nav><a href="accueil.html">Accueil</a></nav>
-            <nav><a href="musique.html">Musique</a></nav>
             <nav><a href="rechercher.html">Rechercher</a></nav>
             <nav><a href="contact.html">Contact</a></nav>
         </div>
     </header>
+    
     <h1>Ma musique</h1>
     <p>Venez découvrir ma musique</p>
 
@@ -70,7 +70,23 @@
 
         mysqli_close($connexion);
     ?>
+
+
+       
+    <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="Rechercher.html">Rechercher</a></li>
+        <li><a href="accueil.html">Accueil</a></li>
+    
+    
+    
+    
+    
+    </ul>
     </body>
+
+
+
     </html>
 
     
