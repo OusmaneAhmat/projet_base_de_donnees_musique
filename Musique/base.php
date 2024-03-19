@@ -10,7 +10,7 @@
             background-color: #3498db;
         }
         .navigation{
-            background-color:orange;
+            background-color:gainsboro;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -24,6 +24,34 @@
      li:hover{
         color: white;
      }
+
+     h1{
+        text-align: center;
+        font-weight: bold;
+     }
+     p{
+        text-align: center;
+        font-weight: bold;
+     }
+     table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: white;
+    }
+    th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    audio {
+        margin-top: 10px;
+    }
+
+
     </style>
 </head>
 <body>
@@ -35,8 +63,8 @@
         </div>
     </header>
     
-    <h1>Ma musique</h1>
-    <p>Venez découvrir ma musique</p>
+    <h1>Mes musiques</h1>
+    <p>Venez découvrir ma musique préferées</p>
 
     <?php
         $serveur = "localhost";
@@ -55,48 +83,45 @@
         $sql = "SELECT * FROM musique" ;
         $resultat = mysqli_query($connexion, $sql) ;
 
-        if ($resultat) { 
-            foreach ($resultat as $musique) {
-                echo "Chanteur: " . $musique['chanteur'] . "<br>";
-                echo "Album: " . $musique['album'] . "<br>";
-                echo "Titre: " . $musique['titre'] . "<br>";
-                echo "Année: " . $musique['annee'] . "<br>";
-                echo "Durée: " . $musique['duree'] . "<br>";
-                echo "<audio controls src='" . $musique['url'] . "'></audio><br>";
-                echo "<a href='" . $musique['url'] . "'>Télécharger</a><br>";
-                echo "<br>";
-            }
-        } else {
-            echo "Erreur : " . mysqli_error($connexion); 
-        }
+     if ($resultat) { 
+        echo "<table>";
+        echo "<tr>";
+        echo "<th>Chanteur</th>";
+        echo "<th>Album</th>";
+        echo "<th>Titre</th>";
+        echo "<th>Année</th>";
+        echo "<th>Durée</th>";
+        echo "<th>Lecture</th>";
+        echo "<th>Télécharger</th>";
+        echo "</tr>";
         
-
-        mysqli_close($connexion);
+        foreach ($resultat as $musique) {
+            echo "<tr>";
+            echo "<td>" . $musique['chanteur'] . "</td>";
+            echo "<td>" . $musique['album'] . "</td>";
+            echo "<td>" . $musique['titre'] . "</td>";
+            echo "<td>" . $musique['annee'] . "</td>";
+            echo "<td>" . $musique['duree'] . "</td>";
+            echo "<td><audio controls src='" . $musique['url'] . "'></audio></td>";
+            echo "<td><a href='" . $musique['url'] . "'>Télécharger</a></td>";
+            echo "</tr>";
+                }
+        
+                echo "</table>";
+            } else {
+                echo "Erreur : " . mysqli_error($connexion); 
+            }
+            mysqli_close($connexion);
     ?>
 
-
-       
     <ul class "lien">
         <li><a href="contact.html">Contact</a></li>
         <li><a href="Rechercher.html">Rechercher</a></li>
         <li><a href="accueil.html">Accueil</a></li>
-    
-    
-    
-    
-    
     </ul>
     </body>
-
-
-
     </html>
 
     
  
 
-
-
-
-
-  
