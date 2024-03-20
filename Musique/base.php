@@ -13,7 +13,7 @@
             background-color:gainsboro;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: space-around;
             padding: 30px;
             font-weight: 800;
             font-family: 'Times New Roman', Times, serif;
@@ -66,7 +66,7 @@
     <h1>Mes musiques</h1>
     <p>Venez découvrir ma musique préferées</p>
 
-    <?php
+     <?php
         $serveur = "localhost";
         $utilisateur = "root"; 
         $mot_de_passe = ""; 
@@ -80,6 +80,27 @@
     { echo "Connexion réussie à la base de données.";
 
     }
+
+
+    if (isset($_POST['Rechercher'])) {
+        $Rechercher = $_POST['Rechercher'];
+        $sql = "SELECT * FROM musique WHERE titre LIKE '%$Rechercher%'";
+        $resultat = mysqli_query($connexion, $sql) ;
+    
+        if ($resultat) {
+            while ($musique = mysqli_fetch_assoc($resultat)) {
+                echo "Titre: " . $musique['titre'] . "<br>";
+                echo "Chanteur: " . $musique['chanteur'] . "<br>";
+            }
+        } else {
+            echo "Aucune musique trouvée.";
+        }
+    }
+    
+
+
+
+
         $sql = "SELECT * FROM musique" ;
         $resultat = mysqli_query($connexion, $sql) ;
 
@@ -112,8 +133,8 @@
                 echo "Erreur : " . mysqli_error($connexion); 
             }
             mysqli_close($connexion);
-    ?>
 
+    ?>
     <ul class "lien">
         <li><a href="contact.html">Contact</a></li>
         <li><a href="Rechercher.html">Rechercher</a></li>
