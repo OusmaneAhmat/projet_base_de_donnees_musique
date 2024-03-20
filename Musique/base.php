@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>musique</title>
+
+
+
+
+
+
     <style>
         body{
             background-color: #3498db;
         }
         .navigation{
-            background-color:gainsboro;
+            background-color: gainsboro;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
@@ -20,39 +26,37 @@
         }
         .navigation :hover {
             color: white;
-     }
-     li:hover{
-        color: white;
-     }
-
-     h1{
-        text-align: center;
-        font-weight: bold;
-     }
-     p{
-        text-align: center;
-        font-weight: bold;
-     }
-     table {
-        width: 80%;
-        margin: 20px auto;
-        border-collapse: collapse;
-        background-color: white;
-    }
-    th, td {
-        padding: 10px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-    }
-    th {
-        background-color: #f2f2f2;
-    }
-    audio {
-        margin-top: 10px;
-    }
-
-
+        }
+        li:hover{
+            color: white;
+        }
+        h1{
+            text-align: center;
+            font-weight: bold;
+        }
+        p{
+            text-align: center;
+            font-weight: bold;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        audio {
+            margin-top: 10px;
+        }
     </style>
+
 </head>
 <body>
     <header>
@@ -62,7 +66,6 @@
             <nav><a href="contact.html">Contact</a></nav>
         </div>
     </header>
-    
     <h1>Mes musiques</h1>
     <p>Venez découvrir ma musique préferées</p>
 
@@ -71,37 +74,37 @@
         $utilisateur = "root"; 
         $mot_de_passe = ""; 
         $base_de_donnees = "base";
-        // connexion avec la base de donnée
         $connexion = mysqli_connect($serveur, $utilisateur, $mot_de_passe, $base_de_donnees);
-
-        // verifie la connexion
-        if (!$connexion) { die("Échec de la connexion : " . mysqli_connect_error()); 
-        } else
-    { echo "Connexion réussie à la base de données.";
-
-    }
-
-
-    if (isset($_POST['Rechercher'])) {
-        $Rechercher = $_POST['Rechercher'];
-        $sql = "SELECT * FROM musique WHERE titre LIKE '%$Rechercher%'";
-        $resultat = mysqli_query($connexion, $sql) ;
-    
-        if ($resultat) {
-            while ($musique = mysqli_fetch_assoc($resultat)) {
-                echo "Titre: " . $musique['titre'] . "<br>";
-                echo "Chanteur: " . $musique['chanteur'] . "<br>";
-            }
-        } else {
-            echo "Aucune musique trouvée.";
+        if (!$connexion) { 
+            die("Échec de la connexion : " . mysqli_connect_error()); 
+        } 
+        else
+        { 
+            echo "Connexion réussie à la base de données.";
         }
-    }
-    
 
-
-
-
-        $sql = "SELECT * FROM musique" ;
+            if (isset($_POST['Rechercher'])) {
+                $Rechercher = $_POST['Rechercher'];
+                $sql = "SELECT * FROM musique WHERE titre LIKE '%$Rechercher%'";
+                $resultats = mysqli_query($connexion, $sql) ;
+                if($resultats){
+                    foreach ($resultats as $musique) {
+                        echo "<tr>";
+                        echo "<td>" . $musique['chanteur'] . "</td>";
+                        echo "<td>" . $musique['album'] . "</td>";
+                        echo "<td>" . $musique['titre'] . "</td>";
+                        echo "<td>" . $musique['annee'] . "</td>";
+                        echo "<td>" . $musique['duree'] . "</td>";
+                        echo "<td><audio controls src='" . $musique['url'] . "'></audio></td>";
+                        echo "<td><a href='" . $musique['url'] . "'>Télécharger</a></td>";
+                        echo "</tr>";
+                    }
+                } else{
+                    echo "Aucun resultat trouvé";
+                }
+            }
+            else {
+                $sql = "SELECT * FROM musique" ;
         $resultat = mysqli_query($connexion, $sql) ;
 
      if ($resultat) { 
@@ -126,14 +129,16 @@
             echo "<td><audio controls src='" . $musique['url'] . "'></audio></td>";
             echo "<td><a href='" . $musique['url'] . "'>Télécharger</a></td>";
             echo "</tr>";
-                }
+        }
         
-                echo "</table>";
-            } else {
-                echo "Erreur : " . mysqli_error($connexion); 
+        echo "</table>";
+    } else {
+        echo "Erreur : " . mysqli_error($connexion); 
+    }
             }
+                
             mysqli_close($connexion);
-
+                
     ?>
     <ul class "lien">
         <li><a href="contact.html">Contact</a></li>
