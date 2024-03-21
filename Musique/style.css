@@ -1,41 +1,7 @@
-
-/* td:nth-child(1) {
-    font-weight: bold;
-    color: blue; /* Changer la couleur selon vos préférences */
-
-
 /* Styliser les titres des chansons */
 td:nth-child(3) {
-    font-style: italic;
-    color: green; /* Changer la couleur selon vos préférences */
-}
-
-/* Styliser les albums */
-td:nth-child(2) {
-    text-transform: uppercase;
-}
-
-/* Styliser la durée */
-td:nth-child(5) {
-    font-weight: bold;
-}
-
-/* Styliser l'année */
-td:nth-child(4) {
-    color: red; /* Changer la couleur selon vos préférences */
-} */
-
-
-/* Styliser les noms de chanteurs */
-td:nth-child(1) {
-    font-weight: bold;
-    color: #3366ff; /* Bleu */
-}
-
-/* Styliser les titres des chansons */
-td:nth-child(3) {
-    font-style: italic;
-    color: #ff4d4d; /* Rouge */
+    font-style: bold;
+    color: #cd0d0d; /* Rouge */
 }
 
 /* Styliser les albums */
@@ -52,7 +18,7 @@ td:nth-child(5) {
 
 /* Styliser l'année */
 td:nth-child(4) {
-    color: #ff9933; /* Orange */
+    color: #3112d0; /* Orange */
 }
 
 /* Styliser les lignes impaires */

@@ -1,5 +1,4 @@
 <?php
-
 $serveur = "localhost";
 $utilisateur = "root"; 
 $mot_de_passe = ""; 
@@ -27,6 +26,9 @@ if (!empty($_POST)) {
     $sql = "INSERT INTO message (prenom, nom, email, telephone, message, objet)
     VALUES('$prenom','$nom', '$email', '$telephone', '$message', '$objet')" ;
     mysqli_query($connexion, $sql) ;
+    
+    
+   
 } else {
     echo "Erreur.";
 }

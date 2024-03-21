@@ -6,22 +6,24 @@
     <link rel="stylesheet" href="style.css">
     <title>musique</title>
     <style>
+        body{
+            background-color: #d3f8dc;
+        }
         .navigation{
-            background-color:orange;
+            background-color:#ffc87a;
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            padding: 30px;
+            padding: 50px;
             font-weight: 800;
             font-family: 'Times New Roman', Times, serif;
             color: white;
+            font-size: 30px;
         }
         .navigation :hover {
             color: white;
         }
-        li:hover{
-            color: white;
-        }
+    
         h1{
             text-align: center;
             font-weight: bold;
@@ -50,20 +52,57 @@
             margin-top: 10px;
         }
 
-    
+        div{
+            padding:7px;
+         text-align: center;
+        }
+    div:hover{
+        color:chartreuse
+    }
+
+        h2{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="navigation">
             <nav><a href="accueil.html">Accueil</a></nav>
+            <nav><a href="base.php">Musique</nav></a>
             <nav><a href="rechercher.html">Rechercher</a></nav>
             <nav><a href="contact.html">Contact</a></nav>
         </div>
     </header>
-    <h1>Mes musiques</h1>
-    <p>Venez découvrir ma musique préferées</p>
-
+    <h1>Mes musiques préferées🎵🎵🎵</h1>
+   
+    <h2>Ajouter une musique</h2>
+ 
+ <form action="ajout.php" method="POST">
+     <div>
+         <label for="chanteur">artiste* : </label>
+         <input type="text" name="chanteur" value="chanteur" required>
+     </div>
+     <br>
+     <div>
+         <label for="titre">Titre* :</label>
+         <input type="text" name="titre" value="titre" required>
+     </div>
+     <br>
+     <div>
+         <label for="album"><strong>Album* :</strong></label>
+         <input type="" name="album" value="album" required>
+     </div>
+     <br>
+     <div>
+         <label for="annee">annee* :</label>
+         <input type="text" name="annee" value="annee" required>
+     </div>
+     <br>
+        <div>
+            <input type="submit" value="Soumettre">
+        </div>
+ </form>
        <?php 
         $serveur = "localhost";
         $utilisateur = "root"; 
@@ -102,6 +141,7 @@
                             echo "<td><a href='" . $musique['url'] . "'>Télécharger</a></td>";
                             echo "</tr>";
                         }
+                        
                     } else{
                         echo "Aucun résultat trouvé";
                     }
