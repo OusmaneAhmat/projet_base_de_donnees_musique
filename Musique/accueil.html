@@ -9,7 +9,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-          background-color: #3498db;;
         }
         main {
             padding: 20px;
@@ -17,6 +16,7 @@
         h1 {
             text-align: center;
             font-weight: bold;
+         text-decoration: underline;
         }
         h2 {
             text-align: center;
@@ -25,6 +25,7 @@
         h3 {
             text-align: center;
             font-weight: bold;
+            text-decoration: underline;
         }
         p {
             text-align: center;
@@ -32,26 +33,48 @@
             font-weight: normal;
             margin: 20px 0;
             padding: 0 10px;
-        }
-        li:hover{
-        color: white;
+            font-family: 'Arial', sans-serif;
+        
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+     }
+     header{  
+        background-color:orange;
+        display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 30px;
+            font-weight: 800;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+     }
+
+     header:hover{
+        color:white;
      }
     </style>
 </head>
 <body>
+    <header>
+        
+            <nav><a href="contact.html">Contact</a></nav>
+            <nav><a href="base.php">Musique</nav></a>
+            <nav><a href="Rechercher.html">Rechercher</a></nav>
+          
+    </header>
     <main>
         <h1>MINI PROJET:</h1>
-        <h2>Créer une base de données de musique et développer une interface web avec PHP pour y accéder et y faire des recherches.</h2>
+        <h2>" Créer une base de données de musique et développer une interface web avec PHP pour y accéder et y faire des recherches. "</h2>
         <h3>Description</h3>
         <p>"Sur notre site, nous vous proposons une expérience unique où vous pouvez regrouper toutes vos musiques préférées en un seul endroit. Que vous soyez passionné par les mélodies envoûtantes de la musique indienne ou que vous exploriez d'autres genres musicaux, notre plateforme est là pour vous accompagner dans votre voyage musical. En tant que passionné de musique indienne, je me suis découvert une obsession pour ses sonorités envoûtantes. Cette passion m'a même conduit à commencer à apprendre à chanter. C'est ainsi que j'ai réalisé l'importance de rassembler mes musiques préférées dans un lieu centralisé. Que vous souhaitiez simplement écouter vos chansons préférées ou découvrir de nouveaux artistes et genres musicaux, notre site vous offre la possibilité de créer votre propre collection personnalisée. Rejoignez-nous dans cette aventure musicale et explorez un monde de sonorités riches et variées."
             Que vous souhaitiez simplement écouter vos chansons préférées ou découvrir de nouveaux artistes et genres musicaux, notre site vous offre la possibilité de créer votre propre collection personnalisée. Rejoignez-nous dans cette aventure musicale et explorez un monde de sonorités riches et variées."
         </p>
     </main>
-
-    <ul>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="base.php">Musique</a></li>
-        <li><a href="Rechercher.html">Rechercher</a></li>
-      </ul>
 </body>
 </html>

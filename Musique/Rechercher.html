@@ -4,32 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rechercher</title>
-
     <style>
          body{
-            background-color: #3498db;
+            text-align: center;
          } 
      li:hover{
         color: white;
      }
+header{
+    background-color:orange;
+        display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 30px;
+            font-weight: 800;
+            font-family: 'Times New Roman', Times, serif;
+            color: white;
+}
+
+header:hover{
+    color:blue
+}
     </style>
 </head>
 <body>
-    <h1>Recherche de musique par nom d'artiste</h1>
-    <form action="base.php" method="POST">
-        <label for="Rechercher">titre:</label>
-        <input type="text" id="" name="Rechercher">
-        <button type="submit">Rechercher</button>
-    </form>
-
-    <footer>
-        <ul>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="base.php">Musique/a></li>
-            <li><a href="accueil.html">Mccueil</a></li>
-          </ul>
-    </footer>
-    
+    <header>
+    <nav><a href="contact.html">Contact</a></nav>
+        <nav><a href="base.php">Musique</nav></a>
+        <nav><a href="Rechercher.html">Rechercher</a></nav>
+    </header>
+        <h1>Recherche ta musique préferée par titre</h1>
+        <form action="base.php" method="POST">
+            <label for="Rechercher">titre:</label>
+            <input type="text" id="" name="Rechercher">
+            <button type="submit">Rechercher</button>
+        </form> 
 </body>
 </html> 
 
