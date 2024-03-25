@@ -59,4 +59,5 @@ back-office (si possible)
 - 7) ajouter le clib a chaque chanson
 - 8) Ajouter une musique en creant un formulaire
 - 9) ajouter un contact, qui permet à l'utilisateur de m'envoyer un message via un formulaire
+- 10) ajouter des cookies si possobles pour savoir qui a visité
 
